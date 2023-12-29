@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<!-- Methods -->
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 6: Style Binding</p>
+					</div>
+					<div class="bg-white my-4 p-3 rounded-lg text-center">
+						<p>Change division color</p>
+						<br />
+						<div class="text-base">
+							<p class="my-3">Enter your color code</p>
+							<input class="border border-red-300 px-3 py-1" type="text" v-model="bgColor" />
+							<input class="border border-red-300 h-7" type="color" v-model="bgColor" />
+						</div>
+
+						<div class="pb-3 my-3 h-60 rounded-md border border-red-500" :style="{'backgroundColor': bgColor}">
+							<!-- <p>Result = {{ activeClass }}</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson6.js"></script>
+	</body>
+</html>

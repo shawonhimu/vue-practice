@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<!-- Methods -->
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 2: Method</p>
+					</div>
+					<p>{{ msg() }}</p>
+					<div class="bg-white my-4 p-3 rounded-lg">
+						<p class="mb-5">Counted Value : {{ counter < 0 ? 0 : counter }}</p>
+						<button @click="increase" class="bg-green-700 text-slate-50 px-4 py-2 rounded-lg">Increment</button>
+						<button @click="decrease" class="bg-green-700 text-slate-50 px-4 py-2 rounded-md mx-4">Decrement</button>
+						<div class="my-2"></div>
+						<button @click="increaseTwo(2)" class="bg-green-700 text-slate-50 px-4 py-2 rounded-lg">Increment Two</button>
+						<button @click="decreaseTwo(2)" class="bg-green-700 text-slate-50 px-4 py-2 rounded-md mx-4">Decrement Two</button>
+					</div>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson2.js"></script>
+	</body>
+</html>

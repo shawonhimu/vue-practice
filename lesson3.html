@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<!-- Methods -->
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 3: Event Modifier</p>
+					</div>
+					<p>{{ msg() }}</p>
+					<div class="bg-white my-4 p-3 rounded-lg text-center">
+						<form @submit.prevent="handleSubmit">
+							<label for="nameID">Enter your name</label>
+							<br />
+							<input @keyup="handleKeyup" type="text" class="border-blue-600 border-2 rounded my-4" id="nameID" />
+							<br />
+							<p class="mb-4">Welcome {{ name }} !</p>
+
+							<div v-if="name !=''" class="bg-green-200 py-2 rounded-lg my-3">
+								<p>{{ success }}</p>
+							</div>
+							<div v-else="name =''" class="bg-yellow-200 my-3">
+								<p>{{ success }}</p>
+							</div>
+							<button type="submit" class="bg-green-700 text-slate-50 px-4 py-2 rounded-lg">Submit</button>
+						</form>
+					</div>
+
+					<div @click="handleCard" class="bg-white my-4 py-28 rounded-lg text-center">
+						<p class="text-sm my-3">View the result in console</p>
+						<div>
+							<button @click.stop="handleButton" class="bg-green-700 text-slate-50 px-4 py-2 rounded-lg">Click me</button>
+						</div>
+					</div>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson3.js"></script>
+	</body>
+</html>

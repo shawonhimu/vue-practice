@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<!-- Methods -->
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 9: List Rendering of object and number</p>
+					</div>
+					<div class="bg-white my-4 p-3 rounded-lg text-center">
+						<p>List/JSON Rendering: v-for loop</p>
+						<br />
+						<div class="text-base"></div>
+
+						<div class="pb-3 my-3 min-h-60 rounded-md">
+							<table class="table-fixed">
+								<thead class="mx-5">
+									<tr>
+										<th class="p-4 border border-slate-900">Name</th>
+										<th class="p-4 border border-slate-900">Age</th>
+										<th class="p-4 border border-slate-900">Website</th>
+									</tr>
+								</thead>
+								<tbody class="mx-5">
+									<tr v-for="info in aboutMe">
+										<td class="p-4 border border-slate-900">{{ info.name }}</td>
+										<td class="p-4 border border-slate-900">{{ info.age }}</td>
+										<td class="p-4 border border-slate-900">{{ info.website }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson9.js"></script>
+	</body>
+</html>

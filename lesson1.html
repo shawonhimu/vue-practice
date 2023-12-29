@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 1: Data</p>
+					</div>
+					<!-- Data Practice -->
+					<p>{{ message }}</p>
+					<p>My name is {{ info.name }}</p>
+					<p>My age is {{ info.age }}</p>
+					<p class="m-5">
+						My github link ::
+						<a class="bg-green-700 text-slate-50 px-4 py-2 rounded-md" :href="info.link">Click Link</a>
+					</p>
+					<p>{{ msg() }}</p>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson1.js"></script>
+	</body>
+</html>

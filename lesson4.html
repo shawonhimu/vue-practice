@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/tailwind.js"></script>
+		<script src="js/vue.global.js"></script>
+		<title>Vue JS Practice field</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="text-5xl text-center bg-lime-600 p-4">
+				<h2>VueJS::Basic - Practice</h2>
+			</div>
+			<div class="flex flex-row">
+				<div class="basis-1/12"></div>
+				<div class="basis-10/12 col-span-6 text-center text-3xl p-4 rounded-sm bg-gray-300 min-h-screen">
+					<!-- Methods -->
+					<div class="bg-green-300 py-2 rounded-lg my-3">
+						<p>Lesson - 4: Data Binding</p>
+					</div>
+					<div class="bg-white my-4 p-3 rounded-lg text-center">
+						<label for="nameID">Enter your name</label>
+						<br />
+						<input v-model.number="num" type="text" class="border-blue-600 border-2 rounded my-4" id="nameID" />
+						<br />
+
+						<button @click="getDouble" class="bg-green-700 text-slate-50 px-4 pt-2 pb-3 m-1 rounded-lg">Get Double</button>
+						<button @click="getSquare" class="bg-yellow-700 text-slate-50 px-4 pt-2 pb-3 m-1 rounded-lg">Get Square</button>
+						<button @click="addTen" class="bg-blue-700 text-slate-50 px-4 pt-2 pb-3 m-1 rounded-lg">Add Ten</button>
+						<button @click="doReset" class="bg-red-700 text-slate-50 px-4 pt-2 pb-3 m-1 rounded-lg">Reset</button>
+
+						<div class="bg-green-200 py-2 rounded-lg my-3">
+							<p>Entered input = {{ num }}</p>
+						</div>
+						<div class="bg-yellow-200 pt-2 pb-3 my-3 rounded-md">
+							<p>Result = {{ result }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="basis-1/12"></div>
+			</div>
+		</div>
+
+		<script src="js/lesson4.js"></script>
+	</body>
+</html>
